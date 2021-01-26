@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "kubernetes": {
+    "fileMatch": ["^system-components/overlays/.+\\.yaml$"]
+  },
+  "packageRules": [
+    {
+      "managers": ["kustomize", "kubernetes", "helmfile"],
+      "updateTypes": ["minor", "patch", "pin"],
+      "additionalBranchPrefix": "{{baseDir}}-",
+      "commitMessageSuffix": "({{baseDir}})"
+    },
+    {
+      "managers": ["kustomize", "kubernetes", "helmfile"],
+      "updateTypes": ["minor", "patch", "pin"],
+      "paths": ["system-components/overlays/*staging*/**"],
+      "automerge": true
+    },
+    {
+      "managers": ["helmfile"],
+      "packageNames": ["velero"],
+      "prBodyNotes": [
+        "[compare](https://github.com/vmware-tanzu/helm-charts/compare/velero-{{currentVersion}}...velero-{{newVersion}})"
+      ]
+    }
+  ]
+}
