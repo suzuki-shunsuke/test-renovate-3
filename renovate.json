@@ -5,6 +5,7 @@
   "kubernetes": {
     "fileMatch": ["^system-components/overlays/.+\\.yaml$"]
   },
+  "reviewers": ["suzuki-shunsuke"],
   "packageRules": [
     {
       "managers": ["kustomize", "kubernetes", "helmfile"],
@@ -16,6 +17,7 @@
       "managers": ["kustomize", "kubernetes", "helmfile"],
       "updateTypes": ["minor", "patch", "pin"],
       "paths": ["system-components/overlays/*staging*/**"],
+      "reviewers": [],
       "automerge": true
     },
     {
