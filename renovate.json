@@ -2,7 +2,7 @@
   "packageRules": [
     {
       "matchPackageNames": ["protocolbuffers/protobuf"],
-      "extractVersion": "^(?<version>\\d+\\.\\d+\\.\\d+)"
+      "extractVersion": "^v(?<version>.*)$"
     }
   ],
   "regexManagers": [
