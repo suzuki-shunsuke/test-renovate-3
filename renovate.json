@@ -1,16 +1,1 @@
-{
-  "packageRules": [
-    {
-      "matchPackageNames": ["protocolbuffers/protobuf"],
-      "extractVersion": "^v(?<version>.*)$"
-    }
-  ],
-  "regexManagers": [
-    {
-      "fileMatch": ["Dockerfile"],
-      "matchStrings": ["ARG PROTOC_VERSION=(?<currentValue>.*?)\\n"],
-      "depNameTemplate": "protocolbuffers/protobuf",
-      "datasourceTemplate": "github-releases"
-    }
-  ]
-}
+{}
