@@ -1,0 +1,12 @@
+{
+  "regexManagers": [
+    {
+      "fileMatch": ["^README\\.md$"],
+      "matchStrings": [
+        "uses: renovatebot/github-action@(?<currentValue>.+?)"
+      ],
+      "depNameTemplate": "renovatebot/github-action",
+      "datasourceTemplate": "github-releases"
+    }
+  ]
+}
