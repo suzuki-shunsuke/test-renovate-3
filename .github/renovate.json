@@ -3,7 +3,7 @@
     {
       "fileMatch": ["^README\\.md$"],
       "matchStrings": [
-        "uses: renovatebot/github-action@(?<currentValue>.+?)"
+        "uses: renovatebot/github-action@(?<currentValue>[^\\s]+)"
       ],
       "depNameTemplate": "renovatebot/github-action",
       "datasourceTemplate": "github-releases"
