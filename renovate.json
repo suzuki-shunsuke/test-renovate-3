@@ -4,7 +4,6 @@
     "config:recommended",
     ":separateMultipleMajorReleases",
     ":separatePatchReleases",
-    "helpers:pinGitHubActionDigests",
     "helpers:pinGitHubActionDigestsToSemver"
   ]
 }
