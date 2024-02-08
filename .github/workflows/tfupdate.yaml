@@ -1,0 +1,20 @@
+name: "tfupdate"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update_terraform_versions:
+    name: Update terraform versions
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: "Checkout"
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      - name: tfupdate
+        uses: daisaru11/tfupdate-github-actions@v1
+        with:
+          tfupdate_subcommand: terraform
+          tfupdate_path: "."
+
