@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
       - name: tfupdate
-        uses: daisaru11/tfupdate-github-actions@v1
+        uses: daisaru11/tfupdate-github-actions@be636ef891d6ef9f1efd0e1f9f0d10e3e995c192 # v1
         with:
           tfupdate_subcommand: terraform
           tfupdate_path: "."
