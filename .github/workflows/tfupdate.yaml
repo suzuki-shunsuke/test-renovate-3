@@ -1,8 +1,7 @@
 name: "tfupdate"
 
 on:
-  workflow_dispatch:
-
+  workflow_dispatch: null
 jobs:
   update_terraform_versions:
     timeout-minutes: 30
@@ -12,10 +11,11 @@ jobs:
 
       - name: "Checkout"
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          persist-credentials: false
 
       - name: tfupdate
         uses: daisaru11/tfupdate-github-actions@v1
         with:
           tfupdate_subcommand: terraform
           tfupdate_path: "."
-
